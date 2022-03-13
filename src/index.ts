@@ -36,10 +36,10 @@ floralink.initializePlugin(fukarekhenker);
 floralink.initializePlugin(werbeo);
 
 // login deactivated (since superfluous)
-floralink.initializePlugin(werbeo, {
-  email: process.env.WERBEO_EMAIL,
-  password: process.env.WERBEO_SECRET,
-});
+// floralink.initializePlugin(werbeo, {
+//   email: process.env.WERBEO_EMAIL,
+//   password: process.env.WERBEO_SECRET,
+// });
 
 // initalize Express.js and its middleware
 var corsOptions = {
@@ -109,7 +109,7 @@ app.post("/occurrencedata", (req, res) => {
 app.post("/taxonreference", (req, res) => {
   (async () => {
     let { taxonIDs, taxonReferencePluginID } = req.body;
-    let taxonReferenceData = floralink.getTaxonDataByID(
+    let taxonReferenceData = floralink.getTaxonDataByIDs(
       taxonIDs,
       taxonReferencePluginID
     );
@@ -121,7 +121,7 @@ app.post("/taxonreference", (req, res) => {
 app.post("/taxonspecific", (req, res) => {
   (async () => {
     let { taxonIDs, taxonSpecificPluginID } = req.body;
-    let taxonSpecificData = floralink.getTaxonSpecific(
+    let taxonSpecificData = floralink.getTaxonDataByIDs(
       taxonIDs,
       taxonSpecificPluginID
     );
@@ -136,9 +136,7 @@ app.post("/taxonspecific", (req, res) => {
 // starting server
 app.listen(process.env.PORT, () => {
   consoleLine();
-  console.log(
-    `Server starting time: ${(Date.now() - startTime) / 1000} seconds`
-  );
-  console.log(`INFO: floralink-server listening on port ${process.env.PORT}`);
+  console.log(`Server ready in ${Date.now() - startTime} ms`);
+  console.log(`Listening on port ${process.env.PORT}`);
   consoleLine();
 });
