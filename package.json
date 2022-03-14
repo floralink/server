@@ -2,20 +2,23 @@
   "name": "floralink-server",
   "version": "0.1.0",
   "description": "Simple server as a proxy for floralink data",
-  "main": "src/index.ts",
+  "main": "dist/index.js",
   "type": "module",
   "scripts": {
     "dev": "nodemon src/index.ts",
     "clean": "rimraf dist",
     "build": "npm run clean && npx tsc",
-    "start": "node  --es-module-specifier-resolution=node dist",
+    "start": "node --experimental-specifier-resolution=node dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "Vincent Ruge",
   "license": "MIT",
+  "engines": {
+    "node": ">=16.13.1"
+  },
   "dependencies": {
-    "@floralink/core": "file:../core",
+    "@floralink/core": "^0.1.0",
     "@floralink/plugins": "file:../plugins",
     "axios": "^0.25.0",
     "cors": "^2.8.5",

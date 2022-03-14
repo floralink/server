@@ -1,9 +1,13 @@
 # Floralink Server
 
+- [Floralink Server](#floralink-server)
+  - [Routes](#routes)
+  - [Project setup](#project-setup)
+
 A simple server as a proxy and data converter for Floralink.
 Can use [plugins](https://github.com/floralink/plugins) for data providers.
 
-# Routes
+## Routes
 
 | Description                                             | Server route      | Method |
 | ------------------------------------------------------- | ----------------- | ------ |
@@ -12,7 +16,7 @@ Can use [plugins](https://github.com/floralink/plugins) for data providers.
 | Query taxon reference data from a data provider         | `/taxonreference` | POST   |
 | Query taxon specific data from a data provider          | `/taxonspecific`  | POST   |
 
-# Project setup
+## Project setup
 
 ```
 npm install
@@ -35,3 +39,5 @@ Run production build:
 ```
 npm run start
 ```
+
+for more scripts in see `package.json`
