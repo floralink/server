@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "@floralink/core": "^0.1.0",
-    "@floralink/plugins": "file:../plugins",
+    "@floralink/plugins": "^0.1.1",
     "axios": "^0.25.0",
     "cors": "^2.8.5",
     "dotenv": "^16.0.0",
