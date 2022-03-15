@@ -8,13 +8,13 @@ import cors from "cors";
 // @ts-ignore
 import * as floralink from "@floralink/core";
 import {
-  germansl,
   werbeo,
-  ellenberg,
-  rotelistemv,
-  fukarekhenker,
+  germanslDB,
+  ellenbergDB,
+  rotelistemvDB,
+  fukarekhenkerDB,
   // @ts-ignore
-} from "@floralink/plugins";
+} from "@floralink/databases";
 
 /**
  * INITIALIZATION
@@ -29,14 +29,14 @@ console.log("INFO: Server initializing...");
 consoleLine();
 
 // initialize taxon specific databases
-floralink.initializePlugin(germansl);
-floralink.initializePlugin(ellenberg);
-floralink.initializePlugin(rotelistemv);
-floralink.initializePlugin(fukarekhenker);
-floralink.initializePlugin(werbeo);
+floralink.initializeDatabase(germanslDB);
+floralink.initializeDatabase(ellenbergDB);
+floralink.initializeDatabase(rotelistemvDB);
+floralink.initializeDatabase(fukarekhenkerDB);
+floralink.initializeDatabase(werbeo);
 
 // login deactivated (since superfluous)
-// floralink.initializePlugin(werbeo, {
+// floralink.initializeDatabase(werbeo, {
 //   email: process.env.WERBEO_EMAIL,
 //   password: process.env.WERBEO_SECRET,
 // });
