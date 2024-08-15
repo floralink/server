@@ -1,5 +1,7 @@
 # Floralink Server
 
+> Archived since 2024-08-15, functionality moved to [floralink/web](https://github.com/floralink/web) with commit [dce733d](https://github.com/floralink/web/commit/dce733dc019e2f098f474d912c3700e98c0aa928)
+
 - [Floralink Server](#floralink-server)
   - [Routes](#routes)
   - [Project setup](#project-setup)
